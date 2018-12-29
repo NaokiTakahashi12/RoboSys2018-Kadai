@@ -12,11 +12,13 @@
 ## 実行方法
 ### Send
 ```Bash
+cd linux_module
 ./reload.bash
 ./while.bash
 ```
 ### Listener
 ```Bash
+cd linux_module
 ./reload.bash
 cat /dev/robosys_device0
 ```
