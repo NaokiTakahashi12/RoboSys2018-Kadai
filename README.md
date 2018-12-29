@@ -3,6 +3,8 @@
 ## 実施内容
 + RaspberryPiのGPIOを8ピン使用してchar型のデータをLEDで表示する。
 + もう一つのRaspberryPiでLEDで表示したchar型のデータを読み込みコンソールで表示する。
+## 実施結果
++ [YouTube](https://www.youtube.com/watch?v=t3ZmyUtkEA0)
 ## 環境
 + Raspberry Pi 3 Model B Plus Rev 1.3 (BCM2835)
 + Raspbian GNU/Linux 9.6 (stretch) armv7l
