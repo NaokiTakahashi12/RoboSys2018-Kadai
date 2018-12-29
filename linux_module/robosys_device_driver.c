@@ -86,12 +86,8 @@ static ssize_t character_module_read(struct file *file_ptr, char *buffer, size_t
 
 	for(i = 0; i < 8; i ++) {
 		if(gpio_base[status] & (1 << listen_gpios[i])) {
-			catch_string[0] = 1 << (7 - i);
+			catch_string[0] = catch_string[0] | 1 << (7 - i);
 		}
-	}
-
-	if('!' > catch_string[0] || catch_string[0] > '~') {
-		return 0;
 	}
 
 	catch_string[1] = '\n';
@@ -131,7 +127,7 @@ void gpio_input(int number_of_bcm) {
 	index = (u32)(led / 10);
 	shift = (led % 10) * 3;
 	mask = ~(0x7 << shift);
-	gpio_base[index] = (0x0 << shift);
+	gpio_base[index] = (0x000 << shift);
 	gpio_base[index] = gpio_base[index] | (gpio_base[index] & mask);
 }
 
